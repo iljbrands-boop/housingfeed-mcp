@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.housingfeed/rental-listings",
+  "title": "HousingFeed US Rental Listings",
+  "description": "US rental listings for AI assistants: free live search and rent statistics, plus licensed feeds.",
+  "version": "1.0.0",
+  "websiteUrl": "https://housingfeed.com",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://housingfeed.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional. Bearer <HousingFeed key> unlocks the feed tools for your licensed market; the sample search needs no key.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
